@@ -1,0 +1,48 @@
+{
+  "name": "ngramable",
+  "version": "0.1.0",
+  "description": "String ngram splitter.",
+  "main": "./dist/src/index.js",
+  "types": "./dist/src/index.d.ts",
+  "ava": {
+    "files": [
+      "./dist/tests/*.js",
+      "./dist/tests/**/*.js"
+    ],
+    "concurrency": 4,
+    "failFast": true
+  },
+  "scripts": {
+    "clean": "rm -Rf ./dist",
+    "build": "npm run clean; tsc",
+    "lint": "tslint 'src/**/*.ts?(x)'",
+    "prepublish": "npm run build",
+    "test": "npm run build && ava"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xpepermint/ngramablejs.git"
+  },
+  "bugs": {
+    "url": "https://github.com/xpepermint/ngramablejs/issues"
+  },
+  "homepage": "https://github.com/xpepermint/ngramablejs#readme",
+  "keywords": [
+    "ngram",
+    "split",
+    "search",
+    "tokenize",
+    "tokenizer",
+    "convert",
+    "converter",
+    "parse",
+    "parser"
+  ],
+  "author": "Kristijan Sedlak (Xpepermint)",
+  "license": "MIT",
+  "devDependencies": {
+    "ava": "^0.22.0",
+    "tslint": "^5.7.0",
+    "typescript": "^2.5.2"
+  }
+}
