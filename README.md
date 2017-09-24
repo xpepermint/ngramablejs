@@ -25,8 +25,6 @@ tokenize("I like opensource!"); // => ["I", "like", "opensource"]
 
 ngram('opensource', { style: 1, min: 3, max: 5 }); // => ['ope', 'open', 'opens']
 ngram('opensource', { style: 2, min: 3, max: 5 }); // => ['ope', 'open', 'opens', 'pen', 'pens', 'penso', 'ens', 'enso', 'ensou']
-
-
 ```
 
 ## License (MIT)
