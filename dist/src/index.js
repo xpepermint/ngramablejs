@@ -19,9 +19,12 @@ function ngram(str, recipe) {
     if (!str) {
         return [];
     }
+    var grams = [];
     var min = recipe.min > 0 ? recipe.min : 0;
     var max = recipe.max > recipe.min ? recipe.max : str.length;
-    var grams = [];
+    if (max > str.length) {
+        max = str.length;
+    }
     if (recipe.style === NgramStyle.START) {
         for (var i = min; i <= max; i++) {
             grams.push(str.substring(0, i));

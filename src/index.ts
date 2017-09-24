@@ -35,9 +35,12 @@ export function tokenize(str: string): string[] {
 export function ngram(str: string, recipe: NgramRecipe = {}): string[] {
   if (!str) { return []; }
 
-  let min = recipe.min > 0 ? recipe.min : 0;
-  let max = recipe.max > recipe.min ? recipe.max : str.length;
   let grams = [];
+
+  let min = recipe.min > 0 ? recipe.min : 0;
+
+  let max = recipe.max > recipe.min ? recipe.max : str.length;
+  if (max > str.length) { max = str.length; }
 
   if (recipe.style === NgramStyle.START) {
 

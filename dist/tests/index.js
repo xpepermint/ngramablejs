@@ -10,6 +10,8 @@ ava_1["default"]('`tokenize` returns list of words', function (t) {
 ava_1["default"]('`ngram` returns list of grams', function (t) {
     t.deepEqual(src_1.ngram(''), []);
     t.deepEqual(src_1.ngram('opensource', { style: 1, min: 3, max: 5 }), ['ope', 'open', 'opens']);
+    t.deepEqual(src_1.ngram('foo', { style: 1, min: 3, max: 5 }), ['foo']);
     t.deepEqual(src_1.ngram('opensource', { style: 2, min: 3, max: 5 }), ['ope', 'open', 'opens', 'pen', 'pens', 'penso', 'ens', 'enso', 'ensou']);
+    t.deepEqual(src_1.ngram('foo', { style: 2, min: 3, max: 5 }), ['foo']);
 });
 //# sourceMappingURL=index.js.map
