@@ -7,7 +7,7 @@ var NgramStyle;
 })(NgramStyle = exports.NgramStyle || (exports.NgramStyle = {}));
 function tokenize(str) {
     if (typeof str === 'string') {
-        return str.split(/\W/).filter(function (v) { return v; });
+        return str.replace(/[$-/:-?{-~!"^_`\[\]]/g, '').split(' ').filter(function (v) { return v; });
     }
     else {
         return [];

@@ -21,7 +21,7 @@ export interface NgramRecipe {
  */
 export function tokenize(str: string): string[] {
   if (typeof str === 'string') {
-    return str.split(/\W/).filter((v) => v);
+    return str.replace(/[$-/:-?{-~!"^_`\[\]]/g, '').split(' ').filter((v) => v);
   } else {
     return [];
   }

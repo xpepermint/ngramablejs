@@ -6,6 +6,7 @@ test('`tokenize` returns list of words', (t) => {
   t.deepEqual(tokenize(null), []);
 
   t.deepEqual(tokenize('I like opensource!'), ['I', 'like', 'opensource']);
+  t.deepEqual(tokenize('Anže and špela are tokenized!'), ['Anže', 'and', 'špela', 'are', 'tokenized']);
 });
 
 test('`ngram` returns list of grams', (t) => {

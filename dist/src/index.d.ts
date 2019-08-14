@@ -1,6 +1,6 @@
 export declare enum NgramStyle {
     START = 1,
-    MIDDLE = 2,
+    MIDDLE = 2
 }
 export interface NgramRecipe {
     min?: number;
